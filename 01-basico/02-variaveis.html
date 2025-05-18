@@ -1,0 +1,49 @@
+<html>
+    <script>
+
+        //Variáveis podem ser declaradas usando o comando "let", ele pode ter um escopo global, ou local.
+        //Variáveis declaradas globalmente, podem ser chamas dentro de um escopo local, mas não o contrário:
+
+        //Escopo global:
+        let x = 10;
+        console.log("x", x);
+
+        //Escopo local
+        {
+            console.log("x", x);
+            x = 20;
+
+            let y = 30;
+        }
+
+        console.log("x", x);
+
+        //"Const" é um tipo de "variável", não encaixa no conceido de variáveis pois elas não podem ser alteradas, uma vez declaradas.
+        //Constantes precisam ser inicializadas, ou seja, elas precisam receber um valor quando declaradas.
+        //Fora isso, o funcionamento é o mesmo do "let"
+        const y = 10;
+        console.log("x", x);
+
+        {
+            console.log("x", x);
+
+            const y = 30;
+        }
+
+        /*Os nomes de variáreis devem seguir algumas regras:
+         * 1- Não podem conter espaço;
+         * 2- Precisam iniciar com uma letra, _ ou $;
+         * 3- Podem conter apenas letras, números, _, ou $;
+         * 4- Case sensitive;
+         * 5- Não podem usar palavras reservadas (for, function, super...)
+         */
+
+        //É possível fazer um agrupamento de declarações na mesma declaração de variável:
+        
+        let name = "Felippe", age = 40;
+        
+        console.log ("name", name);
+        console.log("age", age);
+
+    </script>
+</html>

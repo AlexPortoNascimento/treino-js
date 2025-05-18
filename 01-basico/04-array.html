@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset = "UTF-8">
+    </head>
+
+    <script>
+        //Declarar mutiplas variáveis sequencialmente é muito trabalhoso e difícil de manipular, principalmente quando o número de variáveis cresce muito:
+        const person1 = "Felippe";
+        const person2 = "Pedro";
+        const person3 = "Paulo";
+
+        console.log(person1);
+        console.log(person2);
+        console.log(person3);
+
+        //Para isso, existe uma extrutura que consegue armazenar valores, os Vetores(Arrays).
+        const persons = ["Felippe", "Pedro", "Paulo"]
+
+        //Nos arrays todos os índices são numéricos (0,1,2,3...), pode-se utilizar desses indíces para acessar seus elementos:
+        console.log(persons[0]);
+        console.log(persons[1]);
+        console.log(persons[2]);
+        
+        //É possível sobrescrever apenas um elemento específico do array utilizando seu índice:
+        persons[0] = "Zé";
+
+        console.log(persons[0]);
+
+        //Se declarar um novo elemento fora do range existente do array, o Js irá criar um novo elemento com o índice declarado (não é uma boa prática):
+        persons[123] = "Alexandre";
+
+        console.log(persons);
+
+        //Para acessar a quantidade de elementos do array, utiliza-se o método length:
+        console.log(persons.length);
+
+    </script>
+</html>

@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta charset = "UTF-8">
+    </head>
+
+    <script>
+        //Date é um tipo específico do JS, possui métodos próprios para manipulação de get e set
+        //Geralmente são melhores utilizados com bibliotecas (moment.js e fs-date)
+
+        //Para declarar uma variável do tipo date podemos:
+        
+        //Inicializar com a data e hora atual do computador:
+        //new Date();
+        
+        //Inicializar com valores pré-definidos:
+        //new Date(year, month, hours, minutes, secons, milliseconds);
+
+        //Inicializar a partir de uma String:
+        //new Date(dateString);
+
+        //Os principais métodos são para dar get e set na data:
+        //getDay() / setDay() - Retorna ou define o dia da semana (0-6)
+        //getDate() / setDate() - Retorna ou define o dia do mês (1-31)
+        //getMonth() / setMonth() - Retorna ou define o mês (0-11)
+        //getFullYear() / setFullYear() - Retorna ou define o ano
+        //getHours() / setHours() - Retorna ou define a hora (0-23)
+        //getMinutes() / setMinutos - Retorna ou define os minutos (0-59)
+        //getSeconds() / setSeconds() - Retorna ou define os segundos (0-59)
+        //parse() - Recupera a data a partir de uma string
+        //toString() - Retorna a data como string
+        //tiISOString - Retorna uma data como string no padrão ISO
+        //toTimeString() - Retorna a hora, apenas
+
+        //Define horaAtual para a hora atual da chamada:
+        const horaAtual = new Date();
+        console.log("Hora atual: ", horaAtual);
+
+        //Define bornDate para o meu dia de nascimento:
+        const bornDate = newDate = new Date(1997, 9, 17, 14, 53, 0);
+        console.log("Meu dia de nascimento: ", bornDate);
+
+        //Date tambem reconhece outros formatos, como string ou ISO:
+        //const bornDate = new Date("Oct 17 1997 14:53:00")
+        //const bornDate = new Date("1997-10-17T09:00:00:000Z")
+        
+        //Quando o Date é chamado, ele retorna no formato padrão de toString(), outras maneiras de chamar o Date:
+        console.log("ISO String: ", bornDate.toISOString());
+        console.log("Dia: ", bornDate.getDate());
+        console.log("Mês: ", bornDate.getMonth() + 1);
+        console.log("Ano: ", bornDate.getFullYear());
+
+        //Calculando a idade da pessoa:
+        console.log("Minha idade: ", horaAtual.getFullYear() - bornDate.getFullYear());
+
+    </script>
+</html>

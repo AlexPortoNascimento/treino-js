@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset = "UTF-8">
+    </head>
+
+    <script>
+
+        //Objetos são muito úteis no Js, pois uma única variável pode ter diversos valores:
+        const person = {
+            name: "Felipe",
+            age: 40,
+            address: {
+                street:"Av. Central",
+                city: "São José dos Campos",
+            },
+        }
+
+        //Consts podem ter seu valor alterados para tipos de Object e Arrays:
+        person.name = "Pedro";
+
+        //Inclusive é possível acrescentar novas propriedade em tempo de execução:
+        person.hairColor = "black";
+
+        //Propriedades de objetos podem ser acessadas utilizando o nome do objeto.propriedade
+        console.log(person.name);
+        console.log(person.age);
+        console.log(person.hairColor);
+
+        //Uma string pode ser interpolada com valores de variáveis e objetos da seguinte maneira:
+        console.log(`${person.name} tem ${person.age} anos e reside na cidade de ${person.address.city}.`)
+    </script>
+</html>

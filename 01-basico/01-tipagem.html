@@ -1,0 +1,36 @@
+<html>
+    <script>
+        console.log("Olá, estou funcionando!");
+
+        //O JavaScript é uma linguagem fracamente tipada, logo, ele tentará converter em tempo de execução o dados baseado no valor.
+        //O comando typeof envia o tipo do item que ele está interpretando.
+
+        console.log("1", typeof 1);
+        console.log("1.2", typeof 1.2);
+        console.log("Felipe", typeof "Felipe");
+        console.log("true", typeof true);
+        
+        //Existe um tipo de dado que espressa a infinitude:
+        console.log(Infinity);
+        console.log(1 / 0);
+
+        //Objetos são tipos de variáveis em que podemos acrescentar propriedades e funções dentro delas:
+        console.log({ propriedade: "valor" });
+        console.log({
+            nome: "Felipe",
+            idade: 40,
+            endereco: {
+                lagradouro: "Av",
+                rua: "Central",
+                bairro: "Itaipu",
+            },
+        })
+
+        //Os arrays são tipos de variáveis que armazenam vários valores dentro do mesmo conjunto:
+        console.log([1,2,3]);
+        //Arrays poodem ter vários tipos de váriáveis dentro do mesmo:
+        console.log([1, "A", true]);
+        //Arrays também podem comportar objetos complexos:
+        console.log([1, "A", {nome: "Felipe", sobrenome: "Fontoura"}]);
+    </script>
+</html>
