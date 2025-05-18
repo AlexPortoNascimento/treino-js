@@ -9,6 +9,9 @@
 
         //While segue essa estrutura:
 
+        console.log("Contador usando o While:")
+        //Um contador que imprime todos os valores que o contador recebe durante o loop.
+
         let contador = 1;
 
         while(contador <= 10) {
@@ -16,7 +19,29 @@
             contador ++;
         };
 
-        
+        //For é uma estrutura de repetição mais complexa, que recebe 3 parâmetros opcionais.
+        //O primeiro parâmetro é uma declaração de variável local que só será utilizada dentro do for.
+        //O segundo parâmetro é o valor que a variável declarada deve receber para encerrar o loop.
+        //O terceiro parâmetro é o incrementador da variável
+
+        //O for segue a seguinte sintaxe:
+
+        /*
+         * for (let i = 0;  i < 9; i++) {
+         *  código do loop; 
+         * };
+         */
+
+        console.log();
+
+        console.log("Contador usando For:")
+        //Um contador que imprime todos os valores que i recebe durante o loop.
+
+        for (let i = 0; i <= 10; i++) {
+            console.log("Contando: ", i);
+        }
+
+        //A principal vantagem do for é abstrair em uma linha de código muitas linhas necessárias no while.
 
     </script>
 </html>
