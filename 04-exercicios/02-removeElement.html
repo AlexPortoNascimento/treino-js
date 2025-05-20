@@ -1,0 +1,45 @@
+<html>
+    <script>
+        /*
+        Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. 
+        The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
+
+        Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things:
+
+        Change the array nums such that the first k elements of nums contain the elements which are not equal to val. 
+        The remaining elements of nums are not important as well as the size of nums.
+        Return k.
+
+        */
+
+        var removeElement = function(nums, val) {
+            //cria uma lista de indices a serem removidos
+            let indices = [];
+            
+            //coleta o primeiro indice a ser removido
+            let idx = nums.indexOf(val);
+            
+            //enquanto houver números igual a val, adiciona a lista de indices
+            while (idx != -1) {
+                indices.push(idx);
+                idx = nums.indexOf(val, idx + 1);
+                console.log(indices);
+            }
+
+            //inverte o array indices para poder remover elementos sem mudar a ordem.
+            indices.sort((a, b) => b - a);
+            
+            //para cada numero na lista de indices, remove o numero de tal indice
+            for (let i = 0; i < indices.length; i++) {
+                nums.splice(indices[i], 1);
+                console.log(nums);
+            }
+        
+            let k = nums.length;
+            return k;
+        };
+
+        removeElement([0,1,2,2,3,0,4,2], 2);
+
+    </script>
+</html>
